@@ -1,0 +1,157 @@
+/* dashboard.module.css */
+
+/* Make body rules global so they apply */
+:global(body) {
+  margin: 0;
+  padding: 0;
+  font-family: "Lexend Deca", system-ui, sans-serif;
+  /* background: #f8f9fb; */
+  /* color: #1e2a38; */
+  background-color: #083F38;
+  color: white;
+}
+
+/* Container */
+.pitchContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Header selectors inside module scope */
+.pitchContainer h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  /* color: #1e2a38; */
+  color: white;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+}
+
+.pitchContainer p {
+  color: #6c757d;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  max-width: 600px;
+}
+
+/* Textarea */
+.pitchInput {
+  width: 100%;
+  max-width: 600px;
+  padding: 1rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #d0d7de;
+  outline: none;
+  resize: none;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  font-family: inherit;
+  color: #083F38;
+}
+
+.pitchInput:focus {
+  border-color: #1e88e5;
+  box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.15);
+}
+
+/* Button */
+.pitchButton {
+  margin-top: 1rem;
+  background-color: #1e88e5;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  font-family: inherit;
+  background-color: #083F38;
+  border: 2px solid #0e5c51;
+}
+
+.pitchButton:hover {
+  background-color: white;
+  color: #083F38;
+}
+
+.pitchButton:active {
+  transform: scale(0.97);
+}
+
+.pitchButton:disabled {
+  background-color: #90caf9;
+  cursor: not-allowed;
+}
+
+/* Output box */
+.pitchOutput {
+  margin-top: 2rem;
+  background: #ffffff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  white-space: pre-wrap;
+  line-height: 1.6;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pitchContainer h1 {
+    font-size: 2.2rem;
+  }
+
+  .pitchContainer p {
+    font-size: 1rem;
+  }
+
+  .pitchInput {
+    font-size: 0.95rem;
+    padding: 0.9rem 1rem;
+  }
+
+  .pitchButton {
+    width: 100%;
+  }
+
+  .pitchOutput {
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pitchContainer {
+    padding: 1.5rem;
+  }
+
+  .pitchContainer h1 {
+    font-size: 1.9rem;
+  }
+
+  .pitchContainer p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small animation for smooth UI */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
